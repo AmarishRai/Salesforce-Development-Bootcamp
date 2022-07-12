@@ -1,0 +1,14 @@
+<apex:page controller="SearchAccounts" sidebar="false">
+    <apex:pageBlock title="Search Accounts">
+        <apex:pageBlockSection>
+            <apex:inputText value="{!AccountToSearch}" label="Account"></apex:inputText>
+            <apex:commandButton action="{!}" value="Search"></apex:commandButton>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection>
+            <apex:pageBlockTable value="{!}" value="v">
+                <apex:column value="{!v.Name}"></apex:column>
+                <apex:column value="{!v.Employees}"></apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
