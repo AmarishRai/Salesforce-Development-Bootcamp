@@ -1,22 +1,29 @@
 <apex:page controller="SearchAccounts" sidebar="false">
-    <apex:tabPanel>
-        <apex:tab label="First tab">
-            <apex:form>
-                <apex:pageBlock title="Search Accounts">
-                    <apex:pageBlockSection>
-                        <apex:inputText value="{!AccountToSearch}" label="Account"></apex:inputText>
-                        <apex:commandButton action="{!AccountRecordsResult}" value="Search" reRender="aTab"></apex:commandButton>
-                    </apex:pageBlockSection>
-                </apex:pageBlock>
-            </apex:form>
-        </apex:tab>
-        <apex:tab label="Second tab">
-            <apex:pageBlock>
-                <apex:pageBlockTable value="{!LstAccounts}" var="v" id="aTab">
-                    <apex:column value="{!v.Name}"></apex:column>
-                    <apex:column value="{!v.NumberOfEmployees}"></apex:column>
-                </apex:pageBlockTable>
-            </apex:pageBlock>
-        </apex:tab>
-    </apex:tabPanel>
+  <apex:tabPanel>
+    <apex:tab label="First tab">
+      <apex:form>
+        <apex:pageBlock title="Search Accounts">
+          <apex:pageBlockSection>
+            <apex:inputText
+              value="{!AccountToSearch}"
+              label="Account"
+            ></apex:inputText>
+            <apex:commandButton
+              action="{!AccountRecordsResult}"
+              value="Search"
+              reRender="aTab"
+            ></apex:commandButton>
+          </apex:pageBlockSection>
+        </apex:pageBlock>
+      </apex:form>
+    </apex:tab>
+    <apex:tab label="Second tab">
+      <apex:pageBlock>
+        <apex:pageBlockTable value="{!LstAccounts}" var="v" id="aTab">
+          <apex:column value="{!v.Name}"></apex:column>
+          <apex:column value="{!v.NumberOfEmployees}"></apex:column>
+        </apex:pageBlockTable>
+      </apex:pageBlock>
+    </apex:tab>
+  </apex:tabPanel>
 </apex:page>

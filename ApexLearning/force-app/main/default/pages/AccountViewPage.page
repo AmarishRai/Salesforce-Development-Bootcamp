@@ -1,27 +1,48 @@
-<apex:page standardController="Account" extensions="LeadExtensions" sidebar="false">
-    <apex:pageMessage severity="Error"></apex:pageMessage>
-    <apex:form>
-        <apex:pageBlock title="Create new Account contact ">
-            <apex:pageBlockSection columns="2" collapsible="false" title="Account Information">
-                <apex:inputText value="{!Account.Name}" label="Account Name " rendered="true"></apex:inputText>
-                <apex:inputText value="{!Account.NumberOfEmployees}" label="Employees "></apex:inputText>
-                <apex:inputText value="{!Account.Rating}" label="Rating"></apex:inputText>
-                <apex:inputText value="{!Account.Type}" label="Type"></apex:inputText>
-            </apex:pageBlockSection>
-            <!-- <apex:pageBlockSection columns="2" collapsible="false" title="Contact Information">
+<apex:page
+  standardController="Account"
+  extensions="LeadExtensions"
+  sidebar="false"
+>
+  <apex:pageMessage severity="Error"></apex:pageMessage>
+  <apex:form>
+    <apex:pageBlock title="Create new Account contact ">
+      <apex:pageBlockSection
+        columns="2"
+        collapsible="false"
+        title="Account Information"
+      >
+        <apex:inputText
+          value="{!Account.Name}"
+          label="Account Name "
+          rendered="true"
+        ></apex:inputText>
+        <apex:inputText
+          value="{!Account.NumberOfEmployees}"
+          label="Employees "
+        ></apex:inputText>
+        <apex:inputText
+          value="{!Account.Rating}"
+          label="Rating"
+        ></apex:inputText>
+        <apex:inputText value="{!Account.Type}" label="Type"></apex:inputText>
+      </apex:pageBlockSection>
+      <!-- <apex:pageBlockSection columns="2" collapsible="false" title="Contact Information">
                 <apex:inputText value="{!conName}" label="Contact Name "></apex:inputText>
                 <apex:inputText value="{!conEmail}" label="Email "></apex:inputText>
             </apex:pageBlockSection> -->
 
-            <apex:pageBlockButtons location="Bottom">
-                <apex:commandButton action="{!Save}" value="Save the record"></apex:commandButton>
-            </apex:pageBlockButtons>
-        </apex:pageBlock>
-        <apex:pageBlock>
-            <apex:pageBlockTable value="{!lLeads}" var="l">
-                <apex:column value="{!l.Name} "></apex:column>
-                <apex:column value="{!l.Status} "></apex:column>
-            </apex:pageBlockTable>
-        </apex:pageBlock>
-    </apex:form>
+      <apex:pageBlockButtons location="Bottom">
+        <apex:commandButton
+          action="{!Save}"
+          value="Save the record"
+        ></apex:commandButton>
+      </apex:pageBlockButtons>
+    </apex:pageBlock>
+    <apex:pageBlock>
+      <apex:pageBlockTable value="{!lLeads}" var="l">
+        <apex:column value="{!l.Name} "></apex:column>
+        <apex:column value="{!l.Status} "></apex:column>
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+  </apex:form>
 </apex:page>
