@@ -4,15 +4,8 @@
       <apex:form>
         <apex:pageBlock title="Search Accounts">
           <apex:pageBlockSection>
-            <apex:inputText
-              value="{!AccountToSearch}"
-              label="Account"
-            ></apex:inputText>
-            <apex:commandButton
-              action="{!AccountRecordsResult}"
-              value="Search"
-              reRender="aTab"
-            ></apex:commandButton>
+            <apex:inputText value="{!AccountToSearch}" label="Account"></apex:inputText>
+            <apex:commandButton action="{!AccountRecordsResult}" value="Search" reRender="aTab"></apex:commandButton>
           </apex:pageBlockSection>
         </apex:pageBlock>
       </apex:form>
